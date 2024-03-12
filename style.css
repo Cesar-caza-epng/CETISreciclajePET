@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+}
+
+.logo {
+    margin-right: auto;
+}
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links li {
+    padding: 0 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease;
+}
+
+.nav__links li a:hover {
+    color: #0a7d5ba8;
+}
+
+.cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #0a7d5ba8;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #0a7d5ba8;
+}
+
+/* Mobile Nav */
+
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #a6b7b2a8;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+}
+
+.foto {
+    height: 250px;
+    width: 250px;
+    position: relative;
+    clip-path: circle(50%);
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .nav__links,
+    .cta {
+        display: none;
+    }
+
+    .menu {
+        display: initial;
+    }
+}
+
+.espacio_caritas {
+    animation: bajar 1s;
+    position: relative;
+    top: 100px;
+    display: block;
+}
+
+@keyframes bajar {
+    0% {
+        opacity: 0;
+        top: -10px;
+    }
+
+    100% {
+        top: 100px;
+        opacity: 1;
+    }
+}
+
+.nosText {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin: 50px;
+}
+
+.descrFotos {
+    background-color: #0fb886;
+    width: 0;
+    height: 0;
+    position: relative;
+    opacity: 0;
+    z-index: 1;
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    margin: 0 auto;
+    border-radius: 15px;
+    top: 100px;
+}
+
+.imgO {
+    opacity: 1;
+    width: 400px;
+    height: 400px;
+}
+
+.Novertexto {
+    display: none;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.Cerrar {
+    position: absolute;
+    left: 350px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+@keyframes APA {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-item {
+    margin: 10px;
+}
+
+.logo-container1 {
+    display: flex;
+    margin-left: em;
+}
+
+.logo-container2 {
+    display: flex;
+    margin-right: 38em;
+}
+
+.Princi {
+    display: flex;
+    justify-content: space-evenly;
+    visibility: inherit;
+}
+
+.h1Index {
+    box-shadow: 10px 10px 10px;
+    border-radius: 15px;
+    text-align: center;
+    border: 10px solid #24252a;
+    background-color: #0a7d5ba8;
+    max-height: 700px;
+    max-width: 700px;
+    visibility: inherit;
+    margin: 25px;
+}
+
+.eslaid {
+    display: flex;
+    overflow: hidden;
+}
+
+/*Para hacer la animacion de alternar las imagenes*/
+#imges {
+    animation: desapa 6s infinite;
+}
+
+@keyframes desapa {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.botoncito {
+    height: 150px;
+    width: 300px;
+    background-color: #0fb886;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 10px solid #24252a;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.h1princi {
+    text-align: center;
+    margin-top: 15%;
+}
+
+#parteExPet{
+    background-color: #097454;
+    transition: 0.5s;
+}
+
+#botellita_re{
+    animation: Lanzar 2s infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+#botellita_tir{
+    animation: Lanzar2 0.03s infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+@keyframes Lanzar {
+    0% {opacity: 0;}
+    20% {opacity: 1; rotate: 90deg;}
+    100% {margin-left: 3000px; rotate: 360deg;}
+}
+
+@keyframes Lanzar2 {
+    0% {opacity: 0;}
+    20% {opacity: 1; rotate: 90deg;}
+    100% {margin-right: 3000px; rotate: 360deg;}
+}
+
+#overlay1{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    transition: 0.5s;
+    margin: 0 auto;
+    bottom: 700px;
+}
+
+#overlay2{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    transition: 0.5s;
+    margin: 0 auto;
+    bottom: 700px;
+}
+
+#overlay3{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    transition: 0.5s;
+    margin: 0 auto;
+    bottom: 700px;
+}
+
+#overlay4{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    transition: 0.5s;
+    margin: 0 auto;
+    bottom: 700px;
+}
+
+#overlay5{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    transition: 0.5s;
+    margin: 0 auto;
+    bottom: 700px;
+}
+
+.overlaibonito{
+    border: 10px solid #24252a;
+    background-color: #0fb886;
+    box-shadow: 10px 10px 10px;
+    border-radius: 15px;
+}
+
+.Cerrar-enIndex{
+    cursor: pointer;
+}
+
+#overlay1fot,#overlay2fot,#overlay3fot,#overlay4fot,#overlay5fot{
+    height: 0px;
+    width: 0px;
+}
